@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Разбор карточек пекарни «Плюшкино»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Yeseva+One&display=swap" rel="stylesheet">
+<style>
+:root{--choc:#4A3328;--choc-3:#2E201A;--gold:#D9A441;--gold-d:#B9862A;--gold-l:#F6E3B8;--cream:#FBF4E8;--card:#fff;--muted:#7A6657;--line:#E8D9C2;--ok:#2F8A4E;--warn:#B9741A;--bad:#B23A3F;--ink:#2A1E18}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Yeseva One",Georgia,serif;font-weight:400;line-height:1.12}
+a{color:inherit}
+.top{background:var(--choc-3);color:#d8c9b6;font-size:13px;padding:9px 0}
+.top a{color:#fff;font-weight:700}
+header.hero{padding:48px 0 30px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d)}
+header h1{font-size:clamp(32px,5vw,50px);margin:12px 0 14px;color:var(--choc)}
+header h1 span{color:var(--bad)}
+header p{font-size:18px;color:#5a4638;max-width:62ch}
+.score{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 8px}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.sc b{display:block;font-family:"Yeseva One";font-weight:400;font-size:34px;margin:4px 0}
+.sc small{color:var(--muted)}
+.sc.bad b{color:var(--bad)}.sc.ok b{color:var(--ok)}
+.compare{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:26px 0}
+.compare table{width:100%;border-collapse:collapse;font-size:15px}
+.compare th,.compare td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.compare th{background:#FDF8EF;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.compare tr:last-child td{border-bottom:0}
+.y{color:var(--ok);font-weight:700}.n{color:var(--bad);font-weight:700}
+h2{font-size:30px;margin:44px 0 16px;color:var(--choc)}
+.find{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin-bottom:12px;display:grid;grid-template-columns:auto 1fr;gap:8px 16px}
+.find>*:not(.num){grid-column:2;min-width:0}
+.num{grid-column:1;grid-row:1/span 9;width:40px;height:40px;border-radius:50%;background:var(--choc);color:var(--gold);display:grid;place-items:center;font-family:"Yeseva One";font-size:18px}
+.find h3{font-family:Nunito;font-weight:800;font-size:19px;line-height:1.3;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px}
+.tag.hi{background:#FBE5E5;color:var(--bad)}.tag.mid{background:#FCEFD6;color:var(--warn)}.tag.lo{background:#EEF0EA;color:#55605a}
+.find p{color:#4a3a2f}
+.find q{font-style:italic}
+.fix{background:#F1F8F2;border-radius:12px;padding:10px 12px;font-size:15px}
+.fix b{color:var(--ok)}
+.shot{display:block;margin-top:4px;border-radius:12px;border:1px solid var(--line);width:100%;max-width:360px;height:auto}
+.offer{background:var(--choc);color:#fff;border-radius:26px;padding:30px;margin:44px 0 20px}
+.offer h2{margin:0 0 12px;color:#fff}
+.offer ul{list-style:none;display:grid;gap:8px;margin:14px 0 20px}
+.offer li{padding-left:26px;position:relative;color:#f1e6d8}
+.offer li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:99px;font-weight:800;text-decoration:none;background:var(--gold);color:var(--choc-3)}
+.btn.o{background:transparent;border:2px solid #fff;color:#fff}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:20px 0 50px;color:var(--muted);font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}.score{grid-template-columns:1fr}.find{grid-template-columns:1fr}.find>*:not(.num){grid-column:1}.num{grid-row:auto}.compare{overflow-x:auto}.compare table{min-width:540px}.offer{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">Разбор подготовил Александр Ли для пекарни «Плюшкино», 28 октября 2026 · <a href="index.html">Концепт сайта →</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">Пекарня «Плюшкино» · Губернский, Бочарникова, 12</span>
+  <h1>Выпечку хвалят, <span>а жалобы на кассе остаются без ответа</span></h1>
+  <p>Посмотрел, как пекарня выглядит в 2ГИС и Яндекс Картах. Про хлеб и пирожные пишут хорошо, но каждый третий отзыв из последних это жалоба на обслуживание, и ни на одну никто не ответил. Плюс в двух картах разные телефоны, а карточка в Яндексе ничья. Почти всё исправляется за неделю и бесплатно.</p>
+  <div class="score">
+    <div class="sc ok"><small>Рейтинг в 2ГИС</small><b>4,7</b><small>329 оценок, 130 отзывов</small></div>
+    <div class="sc bad"><small>Отзывы на 1–2 звезды</small><b>16 из 50</b><small>последних в 2ГИС, ответов 0</small></div>
+    <div class="sc bad"><small>Карточка в Яндексе</small><b>Ничья</b><small>владелец не подтверждён</small></div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="compare"><table>
+    <tr><th></th><th>2ГИС</th><th>Яндекс Карты</th></tr>
+    <tr><td>Рейтинг</td><td>4,7 · 329 оценок</td><td>4,7 · 159 оценок</td></tr>
+    <tr><td>Карточка подтверждена</td><td class="n">Плашка «давно не обновляла данные»</td><td class="n">Нет, «Вы владелец этой организации?»</td></tr>
+    <tr><td>Телефон</td><td>+7 918 123-17-08</td><td class="n">+7 918 210-66-55, другой номер</td></tr>
+    <tr><td>Часы работы</td><td class="y">Ежедневно 7:00–21:00</td><td class="y">Ежедневно 7:00–21:00</td></tr>
+    <tr><td>Меню и цены</td><td class="n">Пусто</td><td class="n">Нет</td></tr>
+    <tr><td>Ответы на отзывы</td><td class="n">0 из 50</td><td class="n">Нельзя, карточка не ваша</td></tr>
+    <tr><td>Фото</td><td>13</td><td>33</td></tr>
+    <tr><td>Сайт</td><td class="n">Нет</td><td>Только визитка на clients.site</td></tr>
+  </table></div>
+
+  <h2>Что нашёл</h2>
+
+  <div class="find"><span class="num">1</span>
+    <h3>Жалобы на обслуживание висят без ответа <span class="tag hi">важно</span></h3>
+    <p>Из 50 последних отзывов в 2ГИС 16 на одну-две звезды, и 13 из них про продавцов, а не про выпечку. Два свежих, март 2026: <q>персонал хамит</q>, <q>обслуживание просто кошмар</q>, при этом оба пишут «еда вкусная». В Яндексе то же самое в цифрах: еду хвалят в 88% отзывов, персонал только в 60%. Ответа нет ни на одну жалобу, и новый покупатель видит только претензии.</p>
+    <div class="fix"><b>Что сделать:</b> спокойно ответить на каждую жалобу от имени пекарни: извиниться, сказать, что поговорили с сотрудниками, пригласить зайти ещё. Даже на старые. Человек, который читает отзывы, видит, что хозяин слышит, и жалоба перестаёт пугать. Дальше отвечать на новые в течение дня, могу взять это на себя.</div>
+  </div>
+
+  <div class="find"><span class="num">2</span>
+    <h3>В 2ГИС и Яндексе разные телефоны <span class="tag hi">важно</span></h3>
+    <p>В 2ГИС указан +7 918 123-17-08, в Яндекс Картах +7 918 210-66-55. Если один из номеров старый, часть людей, кто хочет заказать торт или узнать про хлеб, просто не дозванивается и идёт в другую пекарню.</p>
+    <div class="fix"><b>Что сделать:</b> выбрать один рабочий номер и поставить его в обе карточки и на сайт.</div>
+  </div>
+
+  <div class="find"><span class="num">3</span>
+    <h3>Карточка в Яндекс Картах никому не принадлежит <span class="tag hi">важно</span></h3>
+    <p>На карточке висит «Вы владелец этой организации?». Пока она не подтверждена, нельзя ответить на 82 отзыва, поменять телефон, добавить меню и фото. В «Похожих местах» прямо под вами Яндекс показывает «Плюшку-Ватрушку» с рейтингом 5,0 и 451 оценкой и «Ласточку» 5,0 с акцией «6-ой кофе в подарок».</p>
+    <div class="fix"><b>Что сделать:</b> подтвердить карточку через Яндекс Бизнес. Бесплатно, нужен звонок или СМС на номер пекарни.</div>
+  </div>
+
+  <div class="find"><span class="num">4</span>
+    <h3>2ГИС пишет каждому: «Компания давно не обновляла данные» <span class="tag mid">заметно</span></h3>
+    <p>Эту строку видит каждый, кто открывает карточку, а в разделе «Актуальность данных» стоит «не подтверждена». У соседей в «Похожих организациях» рядом написано «Данные актуальны».</p>
+    <div class="fix"><b>Что сделать:</b> зайти в личный кабинет 2ГИС («Это моя компания») и подтвердить данные. Бесплатно, 10 минут.</div>
+  </div>
+
+  <div class="find"><span class="num">5</span>
+    <h3>Люди спрашивают про хлеб и торты, а отвечает робот <span class="tag mid">заметно</span></h3>
+    <p>В «Вопросах о месте» в 2ГИС: <q>Когда обычно выносят свежий хлеб?</q>, <q>Есть ли торты на заказ?</q>, <q>Доставляют ли вашу выпечку?</q>. Отвечает ИИ-помощник 2ГИС, а не вы. Торты на заказ, бенто и фототорты у вас в карточке есть, но человек этого не узнаёт и заказывает у соседа.</p>
+    <div class="fix"><b>Что сделать:</b> ответить на вопросы от имени пекарни и вынести главное в описание: во сколько свежий хлеб, за сколько дней заказывать торт, как связаться. На сайте сделал блок «хлеб по часам» и заказ торта в MAX.</div>
+  </div>
+
+  <div class="find"><span class="num">6</span>
+    <h3>Вкладка «Меню» пустая, хотя цены уже есть на витрине <span class="tag mid">заметно</span></h3>
+    <p>В 2ГИС во вкладке «Меню» только просьба <q>сфотографируйте меню заведения</q>. При этом на фото витрины видны ценники: корзиночка 60 ₽, пирожное ореховое 95 ₽, торт морковный 110 ₽. Человек, который выбирает, куда зайти за пирожными, видит цены у соседей и не видит у вас.</p>
+    <img class="shot" src="img/showcase.jpg" alt="Витрина пекарни с ценниками" loading="lazy">
+    <div class="fix"><b>Что сделать:</b> 15–20 позиций с ценами в обе карточки: хлеб, пирожки, пирожные, кофе, торт за кило. Обновлять раз в месяц.</div>
+  </div>
+
+  <div class="find"><span class="num">7</span>
+    <h3>На вашей карточке рекламируется другая пекарня <span class="tag mid">заметно</span></h3>
+    <p>В блоке «Похожие организации» прямо под вашим адресом стоит реклама «Хлебных историй» с кнопкой «Заказать доставку». Ниже «Сдоба у дома» и «Хлебшеф» с подписями «Торты на заказ».</p>
+    <div class="fix"><b>Что сделать:</b> заполненная карточка с ценами, ответами и свежими фото перетягивает внимание на вас. В рекламных пакетах 2ГИС есть возможность убрать конкурентов со своей карточки, цену стоит уточнить отдельно.</div>
+  </div>
+
+  <div class="find"><span class="num">8</span>
+    <h3>Скидка вечером есть только на доске внутри <span class="tag lo">просто</span></h3>
+    <p>На одном из фото в 2ГИС на доске написано «Скидка 20% на всю выпечку после 19:00». Это отличный повод зайти по дороге с работы, но ни в 2ГИС, ни в Яндексе об этом ни слова. Если акция ещё действует, она работает только на тех, кто уже внутри.</p>
+    <img class="shot" src="img/board.jpg" alt="Доска со скидкой 20% после 19:00" loading="lazy" style="max-width:240px">
+    <div class="fix"><b>Что сделать:</b> добавить акцию в обе карточки (в Яндексе она показывается прямо в выдаче, как у «Ласточки») и на сайт.</div>
+  </div>
+
+  <div class="find"><span class="num">9</span>
+    <h3>Первое фото в 2ГИС: ваза с цветами, а не выпечка <span class="tag lo">просто</span></h3>
+    <p>Всего 13 фото в 2ГИС против 33 в Яндексе, и обложкой карточки стоит букет в корзинке на столе. Пекарню выбирают глазами: тёплый хлеб и витрина с пирожными продают лучше любого текста. Ещё на вывеске крупно написано «Пекарня», а «Плюшкино» только мелко на круглом знаке, так что фото фасада с подписью помогает узнать вас с улицы.</p>
+    <div class="fix"><b>Что сделать:</b> переснять 10–15 фото: утренний хлеб, витрина, торты на заказ, фасад. Обложкой поставить витрину.</div>
+  </div>
+
+  <div class="offer">
+    <h2>Что предлагаю</h2>
+    <p>Беру на себя всё из списка: вам нужно только подтвердить карточки по коду из СМС.</p>
+    <ul>
+      <li>Подтвердить карточки в 2ГИС и Яндексе, один телефон и одно расписание везде, меню с ценами, рубрики</li>
+      <li>Ответить на все отзывы, в первую очередь на жалобы, и дальше отвечать на новые</li>
+      <li>Поставить хорошие фото: витрина, хлеб, торты, фасад</li>
+      <li>Сайт пекарни со ссылкой из обеих карточек: <a href="index.html" style="color:#fff">вот концепт</a></li>
+      <li>Раз в месяц отчёт: сколько людей посмотрели карточку, позвонили и построили маршрут</li>
+    </ul>
+    <p style="margin-bottom:18px">Разбор бесплатный. Стоимость работ обсудим, она небольшая.</p>
+    <div class="btns">
+      <a class="btn" href="https://t.me/DezmontDeXa" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn o" href="tel:+79147765705">+7 914 776-57-05</a>
+    </div>
+  </div>
+</main>
+<footer><div class="wrap">Данные из открытых карточек 2ГИС и Яндекс Карт на 28 октября 2026. Фото из карточки 2ГИС. Александр Ли.</div></footer>
+</body>
+</html>
